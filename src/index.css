@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: theme('fontFamily.sans');
+  background-color: #ffffff;
+  color: #111827;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-full font-bold transition shadow-soft;
+  }
+  .btn-sm {
+    @apply text-xs px-3 py-2;
+  }
+  .btn-md {
+    @apply text-xs px-3 py-2 sm:text-sm sm:px-4 sm:py-2;
+  }
+  .btn-lg {
+    @apply text-sm px-5 py-2.5 sm:text-base sm:px-6 sm:py-3;
+  }
+  .btn-accent {
+    @apply bg-accent text-white hover:scale-[1.02];
+  }
+  .btn-outline {
+    @apply border border-gray-200 text-gray-900 hover:bg-gray-50;
+  }
+
+  .cta {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl font-bold tracking-wide transition ring-1 ring-black/5 shadow-soft whitespace-nowrap;
+  }
+  .cta-sm {
+    @apply text-xs px-3 py-2;
+  }
+  .cta-md {
+    @apply text-xs px-3 py-2 sm:text-sm sm:px-4 sm:py-2;
+  }
+  .cta-lg {
+    @apply text-sm px-5 py-2.5 sm:text-base sm:px-6 sm:py-3;
+  }
+  .cta-accent {
+    @apply bg-gradient-to-r from-accent to-brand-primary text-white hover:brightness-105;
+  }
+  .cta-outline {
+    @apply bg-white border border-gray-200 text-gray-900 hover:bg-gray-50;
+  }
+
+  .container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  .section {
+    @apply py-16 sm:py-24;
+  }
+  .h1 {
+    @apply text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900;
+  }
+  .h2 {
+    @apply text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900;
+  }
+  .subtext {
+    @apply text-gray-600;
+  }
+  .card {
+    @apply rounded-2xl border border-gray-200 bg-white shadow-soft;
+  }
+  .badge {
+    @apply inline-flex items-center rounded-full px-4 py-2 font-semibold;
+  }
+  .badge-gold {
+    @apply bg-gold/10 text-gold;
+  }
+}
